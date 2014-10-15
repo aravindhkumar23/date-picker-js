@@ -8,6 +8,7 @@
 </head>
 <body>
 <script type="text/javascript" src="http://fgnass.github.io/spin.js/spin.js"></script>
+<div>refer http://designmodo.com/css3-jquery-loading-animations/   for more animate </div>
 <div id="foo"></div>
 <script>
 var opts = {
