@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>blur  a div</title>
+</head>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<body>
+<script type="text/javascript" src="http://fgnass.github.io/spin.js/spin.js"></script>
+
+<button onclick="load();"> click</button>
+<div>refer http://designmodo.com/css3-jquery-loading-animations/   for more animate </div>
+<a href="http://runnable.com/Ufa1U2ULk8R1AAC7/how-to-create-blur-effect-with-jquery-and-css-for-blue-effects">blur effects</a>
+<div id="bod">
+<img src="http://www.joomlaworks.net/images/demos/galleries/abstract/7.jpg">
+	
+</div>
+<div id="foo"></div>
+<script>
+function load(){
+
+
+var filterVal = 'blur(3px)';
+            $("#bod")
+              .css('filter',filterVal)
+              .css('webkitFilter',filterVal)
+              .css('mozFilter',filterVal)
+              .css('oFilter',filterVal)
+              .css('msFilter',filterVal);
+
+
+var opts = {
+		  lines: 17, // The number of lines to draw
+		  length: 40, // The length of each line
+		  width: 8, // The line thickness
+		  radius: 30, // The radius of the inner circle
+		  corners: 1, // Corner roundness (0..1)
+		  rotate: 0, // The rotation offset
+		  direction: 1, // 1: clockwise, -1: counterclockwise
+		  color: '#000', // #rgb or #rrggbb or array of colors
+		  speed: 0.5, // Rounds per second
+		  trail: 81, // Afterglow percentage
+		  shadow: false, // Whether to render a shadow
+		  hwaccel: false, // Whether to use hardware acceleration
+		  className: 'spinner', // The CSS class to assign to the spinner
+		  zIndex: 2e9, // The z-index (defaults to 2000000000)
+		  top: '50%', // Top position relative to parent
+		  left: '50%' // Left position relative to parent
+		};
+		var target = document.getElementById('foo');
+		var spinner = new Spinner(opts).spin(target);
+target.appendChild(spinner.el);
+}
+</script>
+</body>
+</html>
