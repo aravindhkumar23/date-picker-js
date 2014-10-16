@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>date</title>
+	<link rel="stylesheet" type="text/css" href="jquery.datetimepicker.css">
+	<link href="jquery-ui-1.8.21.custom.css" rel="stylesheet">
+</head>
+<body>
+	<script src="jquery-1.7.2.min.js"></script>
+   <script src="jquery-ui-1.8.21.custom.min.js"></script>
+    <script src="jquery.datetimepicker.js"></script>
+    <script type="text/javascript">
+$(document).ready(function()
+{
+	//  $('#chart').hide();
+	$('.slider').slider({
+		range:true,
+		tooltip:'show',
+		min: 1000,
+	    max: 25000,
+	    animate: "slow",
+	    values:[1000,25000]});
+	 document.getElementById("lower").innerHTML='1000';
+		document.getElementById("upper").innerHTML='25000';
+	//alert("hello");
+	$('#p1f').datetimepicker({
+		timepicker:false,
+		format:'Y-m-d',
+		formatDate:'Y/m/d',
+		closeOnDateSelect:true,
+		validateOnBlur:false
+		});
+	$('#p1t').datetimepicker({
+		timepicker:false,
+		format:'Y-m-d',
+		formatDate:'Y/m/d',
+		closeOnDateSelect:true,
+		validateOnBlur:false
+		});
+	$('#p2f').datetimepicker({
+		timepicker:false,
+		format:'Y-m-d',
+		formatDate:'Y/m/d',
+		closeOnDateSelect:true,
+		validateOnBlur:false
+		});
+	$('#p2t').datetimepicker({
+		timepicker:false,
+		format:'Y-m-d',
+		formatDate:'Y/m/d',
+		closeOnDateSelect:true,
+		validateOnBlur:false
+		});
+	$( ".slider" ).slider({
+		slide: function( event, ui ) {
+		 document.getElementById("lower").innerHTML=ui.values[ 0 ];
+			document.getElementById("upper").innerHTML=ui.values[ 1 ];
+		}
+	 });
+});
+</script>
+									<table>
+									<tr><th></th><th>Period 1 :</th><th></th><th></th><th></th><th>Period 2 :</th><th></th><th></th><th></th></tr>
+								<tr>
+								<td>From :&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								<td><input type="text" id="p1f" value="2014-01-01"></td>
+								<td>&nbsp;&nbsp;&nbsp;&nbsp;To :&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	                             <td><input type="text" id="p1t" value="2014-12-31"></td>
+	                             <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;From :&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								<td><input type="text" id="p2f" value="2014-01-01"></td>
+								<td>&nbsp;&nbsp;&nbsp;&nbsp;To :&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	                            <td><input type="text" id="p2t" value="2014-12-31"></td>
+	                            </tr>
+								</table>
+								<hr>
+								<table>
+								<tr><th>Enter the range</th><th></th></tr>
+								<tr>
+								<td><b style="margin-left:50px;" id="lower"></b><b style="margin-left:540px;" id="upper"></b><div class="slider" style="width:500px;margin-left:100px"></div></td>
+								<td>&nbsp;</td>
+	                                
+	                            </tr>
+								</table>
+								<br><hr><br>
+</body>
+</html>
